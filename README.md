@@ -3,6 +3,8 @@ Alarm-Clock
 
 A cross platform alarm clock
 
+This software will soon be available on the Ubuntu software center!!
+
 
 Compile and run
 ===========
