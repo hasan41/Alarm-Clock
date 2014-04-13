@@ -10,5 +10,13 @@ Compile and run
 ===========
 
 Simply add the whole project to eclipse and then run it from there.
-The compiled jar file is already in the bin folder. To run it go to a
+
+
+Package
+===========
+
+A debian package is available for installing this software on linux systems.
+Please find the debian package in the bin folder.
+
+The compiled jar file is also already in the bin folder. To run it go to a
 terminal and execute: java -jar alarm.jar
