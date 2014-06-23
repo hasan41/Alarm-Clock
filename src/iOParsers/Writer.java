@@ -12,11 +12,16 @@ import utility.AlarmUtilities;
 public class Writer {
 
 	public static void writeConfig(){
+		
+		if(! new File(System.getProperty("user.home") + "/.cache/alarmclock/").exists()){
+			new File(System.getProperty("user.home") + "/.cache/alarmclock/").mkdir();
+		}
 
 		PrintWriter out = null;
 
 		try {
-			out = new PrintWriter(new File(System.getProperty("user.home") + "/AlarmClock.data"));
+			
+			out = new PrintWriter(new File(System.getProperty("user.home") + "/.cache/alarmclock/AlarmClock.data"));
 
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();

@@ -19,12 +19,14 @@ import Components.mainPanel;
 public class AlarmClock {
 
 	public static JFrame frame;
+	public static double Version = 1.0;
 
 	public AlarmClock(){
 		initGui();
 	}
 
 	public void initGui(){
+		
 		frame = new JFrame();
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setJMenuBar(new CMenuBar());

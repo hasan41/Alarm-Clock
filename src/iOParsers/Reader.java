@@ -23,7 +23,8 @@ public class Reader {
 		Scanner sc = null;
 		
 		try{
-			sc = new Scanner(new File(System.getProperty("user.home") + "/AlarmClock.data"));
+			
+			sc = new Scanner(new File(System.getProperty("user.home") + "/.cache/alarmclock/AlarmClock.data"));
 			
 		}catch(Exception e){
 			Settings.getInstance().setTheme(Settings.SYSTEM);

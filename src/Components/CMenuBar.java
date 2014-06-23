@@ -11,6 +11,7 @@ import javax.swing.JMenuBar;
 import javax.swing.KeyStroke;
 
 import Gui.Preferences;
+import Gui.UpdateDialog;
 import Gui.helpDialog;
 
 import utility.Alarm;
@@ -22,7 +23,7 @@ public class CMenuBar extends JMenuBar{
 	
 	private CMenu alarm,help;
 	private CMenuItem newAlarm,preferences,exit;
-	private CMenuItem shortcuts,about;
+	public static CMenuItem shortcuts,about,updateAlarmClock;
 	
 	public CMenuBar(){
 		init();
@@ -40,6 +41,7 @@ public class CMenuBar extends JMenuBar{
 		
 		help.add(shortcuts = new CMenuItem("Shortcuts", "shortcuts for the application", KeyStroke.getKeyStroke(KeyEvent.VK_F1, 0), 'S'));
 		help.add(about = new CMenuItem("About", "about the developer", KeyStroke.getKeyStroke(KeyEvent.VK_F2, 0), 'A'));
+		help.add(updateAlarmClock = new CMenuItem("Update alarm clock", "update the software", null, 'U'));
 	}
 	
 	public void addComponents(){
@@ -86,6 +88,14 @@ public class CMenuBar extends JMenuBar{
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				new helpDialog(true);
+			}
+		});
+		
+		updateAlarmClock.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				new UpdateDialog();
 			}
 		});
 	}
