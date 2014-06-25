@@ -18,7 +18,8 @@ public class checkUpdates extends Thread{
 
 	@Override
 	public void run() {
-		String link = "https://raw.githubusercontent.com/musaeed/JEditor/master/current_version.txt";
+		
+		String link = "https://github.com/musaeed/Alarm-Clock/raw/master/current_version.txt";
 		String fileName = System.getProperty("user.home")+"/.cache/alarmclock/temp.txt";
 		try{
 			URL url = new URL(link);

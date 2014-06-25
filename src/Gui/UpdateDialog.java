@@ -44,7 +44,7 @@ public class UpdateDialog {
 	
 	public void init(){
 		dialog = new JDialog();
-		dialog.setSize(new Dimension(500,400));
+		dialog.setSize(new Dimension(600,500));
 		dialog.setTitle("Update alarm clock");
 		dialog.setModal(true);
 		dialog.setLocationRelativeTo(AlarmClock.frame);
@@ -56,7 +56,7 @@ public class UpdateDialog {
 	
 	
 	public JPanel getMainPanel(){
-		JPanel panel = new JPanel();
+		JPanel panel = new JPanel(new BorderLayout());
 		pane = new JEditorPane();
 		pane.setBackground(dialog.getBackground());
 		pane.setOpaque(false);
@@ -70,7 +70,8 @@ public class UpdateDialog {
 		}
 		in.close();
 		pane.setContentType("text/html");
-		pane.setText(temp);
+		pane.setText(temp.replace("\n", "<br>"));
+		pane.setCaretPosition(0);
 
 		pane.addHyperlinkListener(new HyperlinkListener() {
 
@@ -85,7 +86,7 @@ public class UpdateDialog {
 				}
 			}
 		});
-		panel.add(pane);
+		panel.add(pane,BorderLayout.CENTER);
 		return panel;
 	}
 	
@@ -120,6 +121,7 @@ public class UpdateDialog {
 					}
 					output.close();
 				} catch(Exception e){
+					JOptionPane.showMessageDialog(AlarmClock.frame, "There is an error while updating. Please try again later.", "Error while updating", JOptionPane.ERROR_MESSAGE);
 					e.printStackTrace();
 					return;
 				}

@@ -3,6 +3,8 @@ import iOParsers.Reader;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 
+import utility.checkUpdates;
+
 import Gui.AlarmClock;
 import Settings.Settings;
 
@@ -41,5 +43,7 @@ public class MainClassAlarmClock {
 		}
 		
 		new AlarmClock();
+		new checkUpdates().start();
+		
 	}
 }

@@ -19,7 +19,7 @@ import Components.mainPanel;
 public class AlarmClock {
 
 	public static JFrame frame;
-	public static double Version = 1.0;
+	public static double Version = 1.1;
 
 	public AlarmClock(){
 		initGui();
