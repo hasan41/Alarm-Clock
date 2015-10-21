@@ -10,12 +10,11 @@ import java.awt.event.KeyEvent;
 import javax.swing.JMenuBar;
 import javax.swing.KeyStroke;
 
+import utility.Alarm;
+import utility.AlarmUtilities;
 import Gui.Preferences;
 import Gui.UpdateDialog;
 import Gui.helpDialog;
-
-import utility.Alarm;
-import utility.AlarmUtilities;
 
 public class CMenuBar extends JMenuBar{
 	

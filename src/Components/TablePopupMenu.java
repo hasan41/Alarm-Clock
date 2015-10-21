@@ -48,7 +48,7 @@ public class TablePopupMenu extends JPopupMenu{
 	}
 	
 	public void addIcons(){
-		edit.setIcon(new ImageIcon(Toolkit.getDefaultToolkit().getImage(Ribbon.class.getClassLoader().getResource("images/settings_small.png"))));
+		edit.setIcon(new ImageIcon(Toolkit.getDefaultToolkit().getImage(Ribbon.class.getClassLoader().getResource("images/edit.png"))));
 		remove.setIcon(new ImageIcon(Toolkit.getDefaultToolkit().getImage(Ribbon.class.getClassLoader().getResource("images/remove_small.png"))));
 		removeAll.setIcon(new ImageIcon(Toolkit.getDefaultToolkit().getImage(Ribbon.class.getClassLoader().getResource("images/removeall.png"))));
 		selectAll.setIcon(new ImageIcon(Toolkit.getDefaultToolkit().getImage(Ribbon.class.getClassLoader().getResource("images/selectall.png"))));
